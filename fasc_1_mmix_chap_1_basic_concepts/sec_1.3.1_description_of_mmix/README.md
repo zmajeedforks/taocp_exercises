@@ -49,7 +49,7 @@ thus treating the numbers as signed rather than unsigned
 
 ▶ **17\.** *`[M22]`* Prove that unsigned integer division by 3 can always be done by multiplication:
 
-If register $Y contains any unsigned integer y, and if register $1 contains the constant `#aaaa aaaa aaaa aaab`, then the sequence
+If register $Y contains any unsigned integer y, and if register $1 contains the constant **`#aaaa aaaa aaaa aaab`**, then the sequence
 ```
 MULU   $0,$Y,$1
 GET    $0,rH
@@ -144,10 +144,10 @@ CSNN   $1,$0,$4
 
 b)
 ```
-BN    $0,@+4*3
-SET   $1,$2
-JMP   @+4*2
-SET   $1,$3
+BN     $0,@+4*3
+SET    $1,$2
+JMP    @+4*2
+SET    $1,$3
 ```
 versus
 ```
@@ -217,7 +217,7 @@ SRU       $1,$1,1
 
 **51\.** *`[14]`* Convert the "number one" program of exercise 49 to a sequence of tetrabytes in hexadecimal notation.
 
-**52\.** *`[22]`* For each MMIX opcode, consider whether there is a way to set the X, Y, and Z bytes so that the result of the instruction is precisely equivalent to **`SWYM`** (except that the execution time may be longer). Assume that nothing is known about the contents of any registers or any memory locations. Whenever it is possible to produce a no-op, state how it can be done. Examples: **`INCL`** is a no-op if X = 255 and Y = Z = 0. BZ is a no-op if Y = 0 and Z = 1. **`MULU`** can never be a no-op, since it affects rH.
+**52\.** *`[22]`* For each MMIX opcode, consider whether there is a way to set the X, Y, and Z bytes so that the result of the instruction is precisely equivalent to **`SWYM`** (except that the execution time may be longer). Assume that nothing is known about the contents of any registers or any memory locations. Whenever it is possible to produce a no-op, state how it can be done. Examples: **`INCL`** is a no-op if X = 255 and Y = Z = 0. **`BZ`** is a no-op if Y = 0 and Z = 1. **`MULU`** can never be a no-op, since it affects rH.
 
 **53\.** *`[15]`* List all MMIX opcodes that can possibly change the value of rH.
 
